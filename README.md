@@ -5,6 +5,11 @@ Human vs AI (Stockfish engine)
 :-------------------------:|:-------------------------:
 
 ## Youtube Video
+# 1)
+
+[![check out my youtube video](https://img.youtube.com/vi/v12ELMNIZVE/0.jpg)](https://www.youtube.com/watch?v=v12ELMNIZVE)
+
+# 2)
 
 [![check out my youtube video](https://img.youtube.com/vi/e0FtXusMFTY/0.jpg)](https://www.youtube.com/watch?v=e0FtXusMFTY)
 
