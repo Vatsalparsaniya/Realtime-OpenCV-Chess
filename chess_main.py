@@ -135,10 +135,10 @@ def thresold_calibreation(img):
             return t
             
 ###################################################################################
-## camara position calibration
+## camera position calibration
 ###################################################################################
 while True:
-    print("Do you want to set camara Position[y/n] : ",end=" ")
+    print("Do you want to set camara Position?[y/n] : ",end=" ")
     answer = str(input())
     if answer == "y" or answer == "Y":
         print("Press q for exit : ")
@@ -165,7 +165,7 @@ while True:
 ## Image warp_presnpective
 ###################################################################################
 while True:
-    print("DO you want to warp prespective image[y/n] :",end=" ")
+    print("DO you want to warp prespective image?[y/n] :",end=" ")
     answer = str(input())
     ret , img = device.read()
     img =   cv2.resize(img,(800,800))
@@ -259,10 +259,10 @@ while True:
 
 
 ###################################################################################
-## calibration thresold
+## calibration threshold
 ###################################################################################
 
-print("calibrate thresold :")
+print("calibrate threshold :")
 ret , img = device.read()
 img =   cv2.resize(img,(800,800))
 img = get_warp_img(img,dir_path,img_resize)
@@ -400,7 +400,7 @@ while not board.is_game_over():
             print("Done Black")
         else:
             #more then 1 player moved detected
-            print("More then 1 playre detected")
+            print("More than 1 player detected")
             print("set player to this postion")
             print(board)
 
