@@ -9,11 +9,11 @@ def nothing(X):
     pass
 def thresold_calibreation(img):
     cv2.namedWindow("thresold_calibration")
-    cv2.createTrackbar("thresold", "thresold_calibration", 0, 255, nothing)
+    cv2.createTrackbar("threshold", "threshold_calibration", 0, 255, nothing)
     while True:
-        t =  cv2.getTrackbarPos("thresold", "thresold_calibration")
+        t =  cv2.getTrackbarPos("threshold", "threshold_calibration")
         matrix,thresold = cv2.threshold(gray,t,255,cv2.THRESH_BINARY_INV)
-        cv2.imshow("thresold",thresold)
+        cv2.imshow("threhsold",thresold)
         if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
 dir_path = os.path.dirname(os.path.realpath(__file__))+"/numpy_saved/1" # path of current directory
@@ -29,7 +29,7 @@ cv2.imshow("Image",gray)
 cv2.waitKey(0)
 thresold_calibreation(gray)
 matrix,thresold = cv2.threshold(gray,9,255,cv2.THRESH_BINARY_INV)
-cv2.imshow("thresold",thresold)
+cv2.imshow("threshold",thresold)
 cv2.waitKey(0)
 
 # kernel = np.ones((3,3),np.uint8)
