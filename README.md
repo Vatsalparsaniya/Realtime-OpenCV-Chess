@@ -6,6 +6,22 @@ Camera captures the image of chessboard then the imageis analyzed using imagepro
 <img src="Images/Open-cv.png" width="48"> ![opencv](https://img.shields.io/badge/CV-Open--CV-green)|<img src="Images/Python3.jpg" width="55">![python](https://img.shields.io/badge/Py-Python3-blue)
 :-------------------------:|:-------------------------:
 
+# Youtube Video
+[![check out my youtube video](https://img.youtube.com/vi/v12ELMNIZVE/0.jpg)](https://www.youtube.com/watch?v=v12ELMNIZVE)|[![check out my youtube video](https://img.youtube.com/vi/e0FtXusMFTY/0.jpg)](https://www.youtube.com/watch?v=e0FtXusMFTY)
+:-------------------------:|:-------------------------:
+
+# Method of Working
+## Step - 1
+Image1 : Image of Chess Board befor player move piece|Image2 : Image of Chess Board after player move piece
+:-------------------------:|:-------------------------:
+![](Method_working/Images/2.jpg)|![](Method_working/Images/2.jpg)
+
+## step - 2
+Use difference of image with function absdiff in CV2
+
+     diff = cv2.absdiff(image1,image2)
+<img src="Method_working/Images/Difference_image.jpg" alt="Difference_image" height="400" width="400"/>
+
 ## Author
 
 <table>
@@ -22,19 +38,3 @@ Camera captures the image of chessboard then the imageis analyzed using imagepro
 </td>
 </tr> 
   </table>
-
-
-
-## Youtube Video
-# 1)
-
-[![check out my youtube video](https://img.youtube.com/vi/v12ELMNIZVE/0.jpg)](https://www.youtube.com/watch?v=v12ELMNIZVE)
-
-# 2)
-
-[![check out my youtube video](https://img.youtube.com/vi/e0FtXusMFTY/0.jpg)](https://www.youtube.com/watch?v=e0FtXusMFTY)
-
-## Working 
-
-## Main Functions
-
