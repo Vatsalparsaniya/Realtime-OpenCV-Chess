@@ -14,13 +14,14 @@ Camera captures the image of chessboard then the imageis analyzed using imagepro
 ## Step - 1
 Image1 : Image of Chess Board befor player move piece|Image2 : Image of Chess Board after player move piece
 :-------------------------:|:-------------------------:
-![](Method_working/Images/2.jpg)|![](Method_working/Images/2.jpg)
+![](Method_working/Images/2.jpg)|![](Method_working/Images/3.jpg)
 
 ## step - 2
-Use difference of image with function absdiff in CV2
+Difference of image by using function absdiff in CV2|Change Difference_image to Gray scale image
+:-------------------------:|:-------------------------:
+ diff = cv2.absdiff(image1,image2)|diff_gray = cv2.cvtColor(diff,cv2.COLOR_BGR2GRAY)|
+ <img src="Method_working/Images/Difference_image.jpg" alt="Difference_image" height="400" width="400"/>|<img src="Method_working/Images/Difference_GrayScale_image.jpg" alt="Difference_image" height="400" width="400"/>
 
-     diff = cv2.absdiff(image1,image2)
-<img src="Method_working/Images/Difference_image.jpg" alt="Difference_image" height="400" width="400"/>
 
 ## Author
 
