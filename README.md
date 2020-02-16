@@ -6,7 +6,60 @@ Camera captures the image of chessboard then the imageis analyzed using imagepro
 <img src="Images/Open-cv.png" width="48"> ![opencv](https://img.shields.io/badge/CV-Open--CV-green)|<img src="Images/Python3.jpg" width="55">![python](https://img.shields.io/badge/Py-Python3-blue)
 :-------------------------:|:-------------------------:
 
-## Author
+# Youtube Video
+[![check out my youtube video](https://img.youtube.com/vi/v12ELMNIZVE/0.jpg)](https://www.youtube.com/watch?v=v12ELMNIZVE)|[![check out my youtube video](https://img.youtube.com/vi/e0FtXusMFTY/0.jpg)](https://www.youtube.com/watch?v=e0FtXusMFTY)
+:-------------------------:|:-------------------------:
+
+# Method of Working
+## Step - 1
+Image1 : Image of Chess Board befor player move piece|Image2 : Image of Chess Board after player move piece
+:-------------------------:|:-------------------------:
+![](Method_working/Images/2.jpg)|![](Method_working/Images/3.jpg)
+
+## step - 2
+Difference of image by using function absdiff in CV2|Change Difference_image to Gray scale image
+:-------------------------:|:-------------------------:
+ diff = cv2.absdiff(image1,image2)|diff_gray = cv2.cvtColor(diff,cv2.COLOR_BGR2GRAY)|
+ <img src="Method_working/Images/Difference_image.jpg" alt="Difference_image" height="400" width="400"/>|<img src="Method_working/Images/Difference_GrayScale_image.jpg" alt="Difference_image" height="400" width="400"/>
+
+
+## step - 3
+Apply thresholding on Grayscale image| Find Contours on threshold image
+:-------------------------:|:-------------------------:
+ matrix,thresold = cv2.threshold(diff_gray,value,255,cv2.THRESH_BINARY)|cnts,_ = cv2.findContours(thresold, cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)|
+ <img src="Method_working/Images/Threshold_image.jpg" alt="Difference_image" height="400" width="400"/>|<img src="Method_working/Images/show_Contours.jpg" alt="Difference_image" height="400" width="400"/>
+
+
+# Main Variables 
+Variables|Explain
+:-------------------------:|:-------------------------:
+<b>points</b> = []  |  # contains chess board corners points|
+<b>boxes = np.zeros((8,8,4),dtype=int)</b>  |  # contains top-left and bottom-right point of chessboard boxes
+<b>fen_line = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR'</b>| # fen line of chess board
+<b>board = chess.Board(fen=fen_line)</b>| # object of chess board
+<b>dir_path = os.path.dirname(os.path.realpath(__file__))+"/numpy_saved"</b>| # path of current directory
+<b>device = cv2.VideoCapture(1)</b> |# set devidce for read image (1: for tacking input from usb-webcam)
+<b>img_resize = (800,800)</b>| # set o/p image size
+<b>engine = chess.engine.SimpleEngine.popen_uci("stockfish-10-win\Windows\stockfish_10_x64.exe")</b>| # stockfish engine
+<b>chess_board = []</b>| # it will store chess board matrix
+<b>bool_position = np.zeros((8,8),dtype=int)</b>| # store bool matrix of Board
+<b>number_to_position_map = []</b>|  # map move values for [0,0]-> (8,a) , [0,1]-> (8,b).... so on
+
+# Main Functions
+Function Name|Explain
+:-------------------------:|:-------------------------:
+<b>get_points(img,n)</b>|select n points on image by double click and returns list of selected points
+<b>get_warp_img(img,dir_path,img_resize)</b>|return warp prespective of image taken by camera and resize it to img_resize value
+<b>map_function()</b>|makes a dictonary to map values { "a8":[0,0],"b8":[0,1],.... so on }
+<b>fen2board(fen_line)</b>|retuen a 8X8 matrix of chess player piece name and bool position
+<b>board2fen(chess_board)</b>|return fen line of chess board
+<b>map_function_for_number_2_position()</b>|makes a list for map values [0,0]="8a", [0,1]="8b",[0,2]="8c",... so on
+<b>rectContains(rectangle,mid_point)</b>| logic function for checking given mid_point is inside the rectangle or not
+<b>show_game(game_img,board,player_move)</b>|This function shows all game in proper format with plane turn, opponent's last move, current chess <b>board, red and green boxes on moved piece, etc.
+<b>set_legal_positions(game_image,board,boxes)</b>| if Illegal move found in chess it shows last correct state of chess board
+
+
+# Author
 
 <table>
 <tr>
@@ -22,19 +75,3 @@ Camera captures the image of chessboard then the imageis analyzed using imagepro
 </td>
 </tr> 
   </table>
-
-
-
-## Youtube Video
-# 1)
-
-[![check out my youtube video](https://img.youtube.com/vi/v12ELMNIZVE/0.jpg)](https://www.youtube.com/watch?v=v12ELMNIZVE)
-
-# 2)
-
-[![check out my youtube video](https://img.youtube.com/vi/e0FtXusMFTY/0.jpg)](https://www.youtube.com/watch?v=e0FtXusMFTY)
-
-## Working 
-
-## Main Functions
-
