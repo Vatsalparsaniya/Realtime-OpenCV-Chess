@@ -3,7 +3,7 @@ Human vs AI (Stockfish engine)
 
 Camera captures the image of chessboard then the images analyzed using imageprocessing to identify the moves made by opponent and stockfish engine calculates the best possible move.
 
-<img src="Images/Open-cv.png" width="48"> ![opencv](https://img.shields.io/badge/CV-Open--CV-green)|<img src="Images/Python3.jpg" width="55">![python](https://img.shields.io/badge/Py-Python3-blue)
+<img src="https://raw.githubusercontent.com/Vatsalparsaniya/Realtime-OpenCV-Chess/master/Images/Open-cv.png" width="48"> ![opencv](https://img.shields.io/badge/CV-Open--CV-green)|<img src="https://raw.githubusercontent.com/Vatsalparsaniya/Realtime-OpenCV-Chess/master/Images/Python3.jpg" width="55">![python](https://img.shields.io/badge/Py-Python3-blue)
 :-------------------------:|:-------------------------:
 
 # Youtube Video
@@ -14,20 +14,20 @@ Camera captures the image of chessboard then the images analyzed using imageproc
 ## Step - 1
 Image1 : Image of Chess Board befor player move piece|Image2 : Image of Chess Board after player move piece
 :-------------------------:|:-------------------------:
-![](Method_working/Images/2.jpg)|![](Method_working/Images/3.jpg)
+![](https://raw.githubusercontent.com/Vatsalparsaniya/Realtime-OpenCV-Chess/master/Method_working/Images/2.jpg)|![](https://raw.githubusercontent.com/Vatsalparsaniya/Realtime-OpenCV-Chess/master/Method_working/Images/3.jpg)
 
 ## step - 2
 Difference of image by using function absdiff in CV2|Change Difference_image to Gray scale image
 :-------------------------:|:-------------------------:
  diff = cv2.absdiff(image1,image2)|diff_gray = cv2.cvtColor(diff,cv2.COLOR_BGR2GRAY)|
- <img src="Method_working/Images/Difference_image.jpg" alt="Difference_image" height="400" width="400"/>|<img src="Method_working/Images/Difference_GrayScale_image.jpg" alt="Difference_image" height="400" width="400"/>
+ <img src="https://raw.githubusercontent.com/Vatsalparsaniya/Realtime-OpenCV-Chess/master/Method_working/Images/Difference_image.jpg" alt="Difference_image" height="400" width="400"/>|<img src="https://raw.githubusercontent.com/Vatsalparsaniya/Realtime-OpenCV-Chess/master/Method_working/Images/Difference_GrayScale_image.jpg" alt="Difference_image" height="400" width="400"/>
 
 
 ## step - 3
 Apply thresholding on Grayscale image| Find Contours on threshold image
 :-------------------------:|:-------------------------:
  matrix,thresold = cv2.threshold(diff_gray,value,255,cv2.THRESH_BINARY)|cnts,_ = cv2.findContours(thresold, cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)|
- <img src="Method_working/Images/Threshold_image.jpg" alt="Difference_image" height="400" width="400"/>|<img src="Method_working/Images/show_Contours.jpg" alt="Difference_image" height="400" width="400"/>
+ <img src="https://raw.githubusercontent.com/Vatsalparsaniya/Realtime-OpenCV-Chess/master/Method_working/Images/Threshold_image.jpg" alt="Difference_image" height="400" width="400"/>|<img src="https://raw.githubusercontent.com/Vatsalparsaniya/Realtime-OpenCV-Chess/master/Method_working/Images/show_Contours.jpg" alt="Difference_image" height="400" width="400"/>
 
 
 # Main Variables 
