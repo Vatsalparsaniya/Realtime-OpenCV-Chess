@@ -1,4 +1,8 @@
-# opencv-chess
+# Realtime-OpenCV-Chess
+♔♕♗♘♙♚♛♝♞♟♖♜
+
+---
+
 Human vs AI (Stockfish engine)
 
 Camera captures the image of chessboard then the images analyzed using imageprocessing to identify the moves made by opponent and stockfish engine calculates the best possible move.
