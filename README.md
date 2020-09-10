@@ -14,6 +14,11 @@ Camera captures the image of chessboard then the images analyzed using imageproc
 [![check out my youtube video](https://img.youtube.com/vi/JnpxzLM8ht0/0.jpg)](https://youtu.be/JnpxzLM8ht0)|[![check out my youtube video](https://img.youtube.com/vi/PQk7sFsqaRQ/0.jpg)](https://youtu.be/PQk7sFsqaRQ)
 :-------------------------:|:-------------------------:
 
+# Image Transformation
+| ![Input-Frame](https://raw.githubusercontent.com/Vatsalparsaniya/Realtime-OpenCV-Chess/master/Images/input-frame.png) | ![warp-perspective](https://raw.githubusercontent.com/Vatsalparsaniya/Realtime-OpenCV-Chess/master/Images/warpperspective.png) | ![locate-boxes](https://raw.githubusercontent.com/Vatsalparsaniya/Realtime-OpenCV-Chess/master/Images/locate-boxes.png) |
+:-------------------------:|:-------------------------:|:-------------------------:
+|Input-Frame|warp-perspective|locate-boxes|
+
 # Method of Working
 ## Step - 1
 Image1 : Image of Chess Board befor player move piece|Image2 : Image of Chess Board after player move piece
